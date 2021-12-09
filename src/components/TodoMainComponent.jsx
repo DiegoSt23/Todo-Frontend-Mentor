@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // React Router
 import { BrowserRouter as Router, NavLink } from "react-router-dom";
@@ -22,7 +22,9 @@ const ToDoMainComponent = () => {
     navBarResponsiveClass,
   } = useTheme();
   const [task, setTask] = useState("");
-  const [tasksArray, setTasksArray] = useState([]);
+  const [tasksArray, setTasksArray] = useState(
+    JSON.parse(localStorage.getItem("array")) || []
+  );
 
   const handleChangeTheme = () => changeTheme();
 
@@ -33,6 +35,10 @@ const ToDoMainComponent = () => {
       setTask("");
     }
   };
+
+  useEffect(() => {
+    localStorage.setItem("array", JSON.stringify(tasksArray));
+  }, [tasksArray]);
 
   return (
     <div className="todo-main-container">

@@ -103,6 +103,8 @@
             justify-content: center;
     -webkit-box-shadow: 0px 20px 30px -15px rgba(0, 0, 0, 0.253);
             box-shadow: 0px 20px 30px -15px rgba(0, 0, 0, 0.253);
+    -webkit-transition: all ease 0.3s;
+    transition: all ease 0.3s;
   }
   .todo-main-container .nav-bar-responsive-dark .link {
     color: #777a92;
@@ -134,6 +136,8 @@
             justify-content: center;
     -webkit-box-shadow: 0px 20px 30px -15px rgba(0, 0, 0, 0.253);
             box-shadow: 0px 20px 30px -15px rgba(0, 0, 0, 0.253);
+    -webkit-transition: all ease 0.3s;
+    transition: all ease 0.3s;
   }
   .todo-main-container .nav-bar-responsive-light .link {
     color: #9193a7;
@@ -396,6 +400,8 @@
   background: -webkit-gradient(linear, left top, right bottom, from(#57ddff), to(#c058f3));
   background: linear-gradient(to right bottom, #57ddff, #c058f3);
   cursor: pointer;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
 }
 
 .single-task-dark .completed-container .incomplete {
@@ -403,6 +409,8 @@
   height: 30px;
   border-radius: 100%;
   border: solid 1px #4d5066;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
 }
 
 .single-task-dark .completed-container .incomplete:hover {

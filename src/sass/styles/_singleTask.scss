@@ -19,12 +19,14 @@
       font-weight: bolder;
       background: linear-gradient(to right bottom, #57ddff, #c058f3);
       cursor: pointer;
+      transition: all ease 0.3s;
     }
     .incomplete {
       width: 30px;
       height: 30px;
       border-radius: 100%;
       border: solid 1px #4d5066;
+      transition: all ease 0.3s;
       &:hover {
         border: solid 1px #c058f3;
         cursor: pointer;
