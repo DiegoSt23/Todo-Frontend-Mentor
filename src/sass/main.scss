@@ -1,0 +1,34 @@
+@import "./styles/todoMainComponent";
+@import "./styles/todos";
+@import "./styles/singleTask";
+
+.main-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all ease 0.3s;
+  position: relative;
+
+  .background-dark {
+    width: 100%;
+    height: 40%;
+    background-image: url("../assets/images/bg-desktop-dark.jpg");
+    background-size: cover;
+    transition: all ease 0.3s;
+  }
+  .background-light {
+    width: 100%;
+    height: 40%;
+    background-image: url("../assets/images/bg-desktop-light.jpg");
+    background-size: cover;
+    transition: all ease 0.3s;
+  }
+  .body {
+    width: 100%;
+    height: 60%;
+    transition: all ease 0.3s;
+  }
+}

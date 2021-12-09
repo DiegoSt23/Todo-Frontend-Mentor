@@ -1,0 +1,584 @@
+.todo-main-container {
+  width: 40%;
+  position: absolute;
+}
+
+.todo-main-container .header {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.todo-main-container .header h1 {
+  letter-spacing: 20px;
+}
+
+.todo-main-container .header .change-theme-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.todo-main-container form {
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.todo-main-container form input {
+  width: 90%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  font-size: 1.1rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.todo-main-container form .add-icon {
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #242424;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.todo-main-container .nav-bar-responsive-dark,
+.todo-main-container .nav-bar-responsive-light {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  .todo-main-container {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .todo-main-container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .todo-main-container {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+  .todo-main-container .header h1 {
+    letter-spacing: 10px;
+  }
+  .todo-main-container form input {
+    font-size: 0.9rem;
+  }
+  .todo-main-container .nav-bar-responsive-dark {
+    margin-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 20px;
+    border-radius: 5px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-shadow: 0px 20px 30px -15px rgba(0, 0, 0, 0.253);
+            box-shadow: 0px 20px 30px -15px rgba(0, 0, 0, 0.253);
+  }
+  .todo-main-container .nav-bar-responsive-dark .link {
+    color: #777a92;
+    text-decoration: none;
+    -webkit-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+    margin: 0px 10px;
+  }
+  .todo-main-container .nav-bar-responsive-dark .link:hover {
+    color: #cacde8;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .todo-main-container .nav-bar-responsive-dark .activeLink {
+    color: #3a7bfd;
+    text-decoration: none;
+    margin: 0px 10px;
+  }
+  .todo-main-container .nav-bar-responsive-light {
+    margin-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 20px;
+    border-radius: 5px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-shadow: 0px 20px 30px -15px rgba(0, 0, 0, 0.253);
+            box-shadow: 0px 20px 30px -15px rgba(0, 0, 0, 0.253);
+  }
+  .todo-main-container .nav-bar-responsive-light .link {
+    color: #9193a7;
+    text-decoration: none;
+    -webkit-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+    margin: 0px 10px;
+  }
+  .todo-main-container .nav-bar-responsive-light .link:hover {
+    color: #242424;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .todo-main-container .nav-bar-responsive-light .activeLink {
+    color: #1563ff;
+    text-decoration: none;
+    margin: 0px 10px;
+  }
+}
+
+.todos {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 5px;
+  margin-top: 30px;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  -webkit-box-shadow: 0px 20px 30px -15px rgba(0, 0, 0, 0.253);
+          box-shadow: 0px 20px 30px -15px rgba(0, 0, 0, 0.253);
+}
+
+.todos .message-container {
+  width: 100%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.todos .tasks-container {
+  width: 100%;
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-y: auto;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.todos .tasks-container::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.todos .tasks-container::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.todos .options-container-dark {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  color: #777a92;
+  font-size: 1rem;
+}
+
+.todos .options-container-dark .incomplete-tasks {
+  width: 30%;
+  font-size: 0.8rem;
+}
+
+.todos .options-container-dark .filter {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.todos .options-container-dark .filter .link {
+  color: #777a92;
+  text-decoration: none;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.todos .options-container-dark .filter .link:hover {
+  color: #cacde8;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.todos .options-container-dark .filter .activeLink {
+  color: #3a7bfd;
+  text-decoration: none;
+}
+
+.todos .options-container-dark .clear-completed {
+  width: 30%;
+  font-size: 0.8rem;
+  text-align: end;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.todos .options-container-dark .clear-completed:hover {
+  color: #cacde8;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.todos .options-container-light {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  color: #9193a7;
+  font-size: 1rem;
+}
+
+.todos .options-container-light .incomplete-tasks {
+  width: 30%;
+  font-size: 0.8rem;
+}
+
+.todos .options-container-light .filter {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.todos .options-container-light .filter .link {
+  color: #9193a7;
+  text-decoration: none;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.todos .options-container-light .filter .link:hover {
+  color: #242424;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.todos .options-container-light .filter .activeLink {
+  color: #1563ff;
+  text-decoration: none;
+}
+
+.todos .options-container-light .clear-completed {
+  width: 30%;
+  font-size: 0.8rem;
+  text-align: end;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.todos .options-container-light .clear-completed:hover {
+  color: #242424;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+  .todos .tasks-container {
+    height: 40vh;
+  }
+  .todos .options-container-dark .filter,
+  .todos .options-container-light .filter {
+    display: none;
+  }
+  .todos .options-container-dark .incomplete-tasks,
+  .todos .options-container-light .incomplete-tasks {
+    width: 50%;
+  }
+  .todos .options-container-dark .clear-completed,
+  .todos .options-container-light .clear-completed {
+    width: 50%;
+  }
+}
+
+.single-task-dark {
+  width: 100%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #cacde8;
+  border-bottom: 1px solid #4d5066;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.single-task-dark .completed-container {
+  width: 10%;
+  color: white;
+}
+
+.single-task-dark .completed-container .complete {
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 100%;
+  font-weight: bolder;
+  background: -webkit-gradient(linear, left top, right bottom, from(#57ddff), to(#c058f3));
+  background: linear-gradient(to right bottom, #57ddff, #c058f3);
+  cursor: pointer;
+}
+
+.single-task-dark .completed-container .incomplete {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: solid 1px #4d5066;
+}
+
+.single-task-dark .completed-container .incomplete:hover {
+  border: solid 1px #c058f3;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.single-task-dark .title-container {
+  width: 80%;
+}
+
+.single-task-dark .remove-container {
+  width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 1.5rem;
+  color: transparent;
+  cursor: pointer;
+}
+
+.single-task-dark:hover .remove-container {
+  color: #4d5066;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.single-task-light {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  color: #313131;
+  border-bottom: 1px solid #d2d3db;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.single-task-light .completed-container {
+  width: 10%;
+  color: white;
+}
+
+.single-task-light .completed-container .complete {
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 100%;
+  font-weight: bolder;
+  background: -webkit-gradient(linear, left top, right bottom, from(#57ddff), to(#c058f3));
+  background: linear-gradient(to right bottom, #57ddff, #c058f3);
+  cursor: pointer;
+}
+
+.single-task-light .completed-container .incomplete {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: solid 1px #d2d3db;
+}
+
+.single-task-light .completed-container .incomplete:hover {
+  border: solid 1px #c058f3;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.single-task-light .title-container {
+  width: 80%;
+}
+
+.single-task-light .remove-container {
+  width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 1.5rem;
+  color: transparent;
+  cursor: pointer;
+}
+
+.single-task-light:hover .remove-container {
+  color: #aaaaaa;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 992px) {
+  .single-task-dark .remove-container {
+    color: #4d5066;
+  }
+  .single-task-light .remove-container {
+    color: #aaaaaa;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .single-task-dark .completed-container .complete,
+  .single-task-dark .completed-container .incomplete,
+  .single-task-light .completed-container .complete,
+  .single-task-light .completed-container .incomplete {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.main-container {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  position: relative;
+}
+
+.main-container .background-dark {
+  width: 100%;
+  height: 40%;
+  background-image: url("../assets/images/bg-desktop-dark.jpg");
+  background-size: cover;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.main-container .background-light {
+  width: 100%;
+  height: 40%;
+  background-image: url("../assets/images/bg-desktop-light.jpg");
+  background-size: cover;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.main-container .body {
+  width: 100%;
+  height: 60%;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+/*# sourceMappingURL=main.css.map */

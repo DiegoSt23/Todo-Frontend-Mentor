@@ -1,0 +1,130 @@
+.single-task-dark {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  color: #cacde8;
+  border-bottom: 1px solid #4d5066;
+  transition: all ease 0.3s;
+  .completed-container {
+    width: 10%;
+    color: white;
+    .complete {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100%;
+      font-weight: bolder;
+      background: linear-gradient(to right bottom, #57ddff, #c058f3);
+      cursor: pointer;
+    }
+    .incomplete {
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      border: solid 1px #4d5066;
+      &:hover {
+        border: solid 1px #c058f3;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+    }
+  }
+  .title-container {
+    width: 80%;
+  }
+  .remove-container {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1.5rem;
+    color: transparent;
+    cursor: pointer;
+  }
+  &:hover .remove-container {
+    color: #4d5066;
+    transition: 0.3s;
+  }
+}
+.single-task-light {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  color: #313131;
+  border-bottom: 1px solid #d2d3db;
+  transition: all ease 0.3s;
+  .completed-container {
+    width: 10%;
+    color: white;
+    .complete {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100%;
+      font-weight: bolder;
+      background: linear-gradient(to right bottom, #57ddff, #c058f3);
+      cursor: pointer;
+    }
+    .incomplete {
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      border: solid 1px #d2d3db;
+      &:hover {
+        border: solid 1px #c058f3;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+    }
+  }
+  .title-container {
+    width: 80%;
+  }
+  .remove-container {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1.5rem;
+    color: transparent;
+    cursor: pointer;
+  }
+  &:hover .remove-container {
+    color: #aaaaaa;
+    transition: 0.3s;
+  }
+}
+
+// Responsive Design
+
+@media screen and (max-width: 992px) {
+  .single-task-dark {
+    .remove-container {
+      color: #4d5066;
+    }
+  }
+  .single-task-light {
+    .remove-container {
+      color: #aaaaaa;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .single-task-dark,
+  .single-task-light {
+    .completed-container {
+      .complete,
+      .incomplete {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
